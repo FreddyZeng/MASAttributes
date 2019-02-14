@@ -79,6 +79,15 @@
                      range:range];
     }
 }
+
+- (void)addBaseLineOffset:(CGFloat)offset substring:(NSString *)substring {
+    NSRange range = [self.string rangeOfStringNoCase:substring];
+    if (range.location != NSNotFound) {
+        [self addAttribute: NSBaselineOffsetAttributeName
+                     value:@(offset)
+                     range:range];
+    }
+}
 - (void)addAlignment:(NSTextAlignment)alignment substring:(NSString *)substring{
     NSRange range = [self.string rangeOfStringNoCase:substring];
     if (range.location != NSNotFound) {
