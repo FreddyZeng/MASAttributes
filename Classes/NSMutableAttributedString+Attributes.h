@@ -23,6 +23,7 @@ typedef NSColor UIColor;
 - (void)addFontWithName:(NSString *)fontName size:(int)fontSize substring:(NSString *)substring;
 - (void)addFont:(UIFont *)font substring:(NSString *)substring;
 - (void)addBaseLineOffset:(CGFloat)offset substring:(NSString *)substring;// baseline offset
+- (void)addLineSpacing:(CGFloat)lineSpacing substring:(NSString *)substring;
 - (void)addAlignment:(NSTextAlignment)alignment substring:(NSString *)substring;
 - (void)addColorToRussianText:(UIColor *)color;
 - (void)addStrokeColor:(UIColor *)color thickness:(int)thickness substring:(NSString *)substring;

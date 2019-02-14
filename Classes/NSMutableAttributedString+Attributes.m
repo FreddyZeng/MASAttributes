@@ -88,6 +88,18 @@
                      range:range];
     }
 }
+
+- (void)addLineSpacing:(CGFloat)lineSpacing substring:(NSString *)substring {
+    NSRange range = [self.string rangeOfStringNoCase:substring];
+    if (range.location != NSNotFound) {
+        NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+        [style setLineSpacing:lineSpacing];
+        [self addAttribute:NSParagraphStyleAttributeName
+                          value:style
+                          range:range];
+    }
+}
+
 - (void)addAlignment:(NSTextAlignment)alignment substring:(NSString *)substring{
     NSRange range = [self.string rangeOfStringNoCase:substring];
     if (range.location != NSNotFound) {
